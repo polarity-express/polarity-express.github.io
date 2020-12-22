@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Dec 2020 01:48:58 -0500</lastBuildDate><atom:link href="https://polarity-express.github.io/tags/writeup/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>2020 Noob CTF Write Up</title>
-      <link>https://polarity-express.github.io/posts/2020-noob-ctf/</link>
+      <title>2020 Vulncon CTF Write Up</title>
+      <link>https://polarity-express.github.io/posts/2020-vulncon-ctf/</link>
       <pubDate>Mon, 21 Dec 2020 01:48:58 -0500</pubDate>
       
-      <guid>https://polarity-express.github.io/posts/2020-noob-ctf/</guid>
+      <guid>https://polarity-express.github.io/posts/2020-vulncon-ctf/</guid>
       <description>Challenge Categories   Forensic Challenges
  Punishment Analysis Attack Compromise    Memory Forensic Challenges
  Game Over Phishy Email    OSINT Challenges

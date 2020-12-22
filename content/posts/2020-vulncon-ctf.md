@@ -1,41 +1,41 @@
 +++
-title = "2020 Noob CTF Write Up"
+title = "2020 Vulncon CTF Write Up"
 date = "2020-12-21T01:48:58-05:00"
 author = "polarity_express"
 authorTwitter = "" #do not include @
 cover = ""
 tags = ["writeup"]
 keywords = ["", ""]
-description = "Write Up For the 2020 Noob CTF"
+description = "Write Up For the 2020 Vulncon CTF"
 showFullContent = false
 +++
 
 # Challenge Categories
-* [Forensic Challenges](/posts/2020-noob-ctf/#forensic-challenges)
+* [Forensic Challenges](/posts/2020-vulncon-ctf/#forensic-challenges)
 
-    * [Punishment](/posts/2020-noob-ctf/#challenge-punishment)
-    * [Analysis](/posts/2020-noob-ctf/#challenge-analysis)
-    * [Attack](/posts/2020-noob-ctf/#challenge-attack)
-    * [Compromise](/posts/2020-noob-ctf/#challenge-compromise)
+    * [Punishment](/posts/2020-vulncon-ctf/#challenge-punishment)
+    * [Analysis](/posts/2020-vulncon-ctf/#challenge-analysis)
+    * [Attack](/posts/2020-vulncon-ctf/#challenge-attack)
+    * [Compromise](/posts/2020-vulncon-ctf/#challenge-compromise)
 
-* [Memory Forensic Challenges](/posts/2020-noob-ctf/#memory-forensic-challenges)
+* [Memory Forensic Challenges](/posts/2020-vulncon-ctf/#memory-forensic-challenges)
 
-    * [Game Over](/posts/2020-noob-ctf/#challenge-game-over)
-    * [Phishy Email](/posts/2020-noob-ctf/#challenge-phishy-email)
+    * [Game Over](/posts/2020-vulncon-ctf/#challenge-game-over)
+    * [Phishy Email](/posts/2020-vulncon-ctf/#challenge-phishy-email)
 
-* [OSINT Challenges](/posts/2020-noob-ctf/#osint-challenges)
-    * [Find The Coin](/posts/2020-noob-ctf/#challenge-find-the-coin)
-    * [trouver](/posts/2020-noob-ctf/#challenge-trouver)
-    * [Flying Bear](/posts/2020-noob-ctf/#challenge-flying-bear)
-    * [The Watcher](/posts/2020-noob-ctf/#challenge-the-watcher)
+* [OSINT Challenges](/posts/2020-vulncon-ctf/#osint-challenges)
+    * [Find The Coin](/posts/2020-vulncon-ctf/#challenge-find-the-coin)
+    * [trouver](/posts/2020-vulncon-ctf/#challenge-trouver)
+    * [Flying Bear](/posts/2020-vulncon-ctf/#challenge-flying-bear)
+    * [The Watcher](/posts/2020-vulncon-ctf/#challenge-the-watcher)
 
 
 
 ## Forensic Challenges
-* [Punishment](/posts/2020-noob-ctf/#challenge-punishment)
-* [Analysis](/posts/2020-noob-ctf/#challenge-analysis)
-* [Attack](/posts/2020-noob-ctf/#challenge-attack)
-* [Compromise](/posts/2020-noob-ctf/#challenge-compromise)
+* [Punishment](/posts/2020-vulncon-ctf/#challenge-punishment)
+* [Analysis](/posts/2020-vulncon-ctf/#challenge-analysis)
+* [Attack](/posts/2020-vulncon-ctf/#challenge-attack)
+* [Compromise](/posts/2020-vulncon-ctf/#challenge-compromise)
 
 ### Challenge: Punishment
 
@@ -117,8 +117,8 @@ This showed that the **karma** user's password is **godisgood**.
 
 ## Memory Forensic Challenges
 
-* [Game Over](/posts/2020-noob-ctf/#challenge-game-over)
-* [Phishy Email](/posts/2020-noob-ctf/#challenge-phishy-email)
+* [Game Over](/posts/2020-vulncon-ctf/#challenge-game-over)
+* [Phishy Email](/posts/2020-vulncon-ctf/#challenge-phishy-email)
 
 
 ### Challenge: Game Over
@@ -179,10 +179,10 @@ This shows that the email with a ":)" in it looks like it was sent from **sarojc
 
 ## OSINT Challenges
 
-* [Find The Coin](/posts/2020-noob-ctf/#challenge-find-the-coin)
-* [trouver](/posts/2020-noob-ctf/#challenge-trouver)
-* [Flying Bear](/posts/2020-noob-ctf/#challenge-flying-bear)
-* [The Watcher](/posts/2020-noob-ctf/#challenge-the-watcher)
+* [Find The Coin](/posts/2020-vulncon-ctf/#challenge-find-the-coin)
+* [trouver](/posts/2020-vulncon-ctf/#challenge-trouver)
+* [Flying Bear](/posts/2020-vulncon-ctf/#challenge-flying-bear)
+* [The Watcher](/posts/2020-vulncon-ctf/#challenge-the-watcher)
 
 
 ### Challenge: Find The Coin 
