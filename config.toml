@@ -48,7 +48,7 @@ publishDir = "docs"
   [languages.en]
     languageName = "English"
     title = "polarity_express"
-    subtitle = "A simple, retro theme for Hugo"
+    subtitle = "polarity_express"
     owner = "polarity_express"
     keywords = ""
     copyright = ""
