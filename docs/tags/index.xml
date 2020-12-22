@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on polarity_express</title>
+    <link>https://polarity-express.github.io/tags/</link>
+    <description>Recent content in Tags on polarity_express</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Dec 2020 01:48:58 -0500</lastBuildDate><atom:link href="https://polarity-express.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>writeup</title>
+      <link>https://polarity-express.github.io/tags/writeup/</link>
+      <pubDate>Mon, 21 Dec 2020 01:48:58 -0500</pubDate>
+      
+      <guid>https://polarity-express.github.io/tags/writeup/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

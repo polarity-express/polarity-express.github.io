@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>2020 Noob CTF Write Up :: polarity_express</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Challenge Categories   Forensic Challenges
+ Punishment Analysis Attack Compromise    Memory Forensic Challenges
+ Game Over Phishy Email    OSINT Challenges
+ Find The Coin trouver Flying Bear The Watcher    Forensic Challenges  Punishment Analysis Attack Compromise  Challenge: Punishment Mr.BEAN was working on his school assignment, But unfortunately, his Lil Sister deleted that assignment file. As Mr.BEAN failed to submit the assignment on time, He will be punished heavily." />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://polarity-express.github.io/posts/2020-noob-ctf/" />
+
+
+
+
+<link rel="stylesheet" href="https://polarity-express.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="https://polarity-express.github.io/assets/pink.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://polarity-express.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://polarity-express.github.io/img/favicon/pink.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="2020 Noob CTF Write Up">
+<meta property="og:description" content="Write Up For the 2020 Noob CTF" />
+<meta property="og:url" content="https://polarity-express.github.io/posts/2020-noob-ctf/" />
+<meta property="og:site_name" content="polarity_express" />
+
+  <meta property="og:image" content="https://polarity-express.github.io">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-12-21 01:48:58 -0500 EST" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="pink">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    polarity_express
+  </div>
+</a>
+
+    </div>
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://polarity-express.github.io/posts/2020-noob-ctf/">2020 Noob CTF Write Up</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-12-21 
+      </span>
+    
+    
+    <span class="post-author">:: polarity_express</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="https://polarity-express.github.io/tags/writeup/">writeup</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="challenge-categories">Challenge Categories<a href="#challenge-categories" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li>
+<p><a href="/posts/2020-noob-ctf/#forensic-challenges">Forensic Challenges</a></p>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-punishment">Punishment</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-analysis">Analysis</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-attack">Attack</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-compromise">Compromise</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/posts/2020-noob-ctf/#memory-forensic-challenges">Memory Forensic Challenges</a></p>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-game-over">Game Over</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-phishy-email">Phishy Email</a></li>
+</ul>
+</li>
+<li>
+<p><a href="/posts/2020-noob-ctf/#osint-challenges">OSINT Challenges</a></p>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-find-the-coin">Find The Coin</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-trouver">trouver</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-flying-bear">Flying Bear</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-the-watcher">The Watcher</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="forensic-challenges">Forensic Challenges<a href="#forensic-challenges" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-punishment">Punishment</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-analysis">Analysis</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-attack">Attack</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-compromise">Compromise</a></li>
+</ul>
+<h3 id="challenge-punishment">Challenge: Punishment<a href="#challenge-punishment" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Mr.BEAN was working on his school assignment, But unfortunately, his Lil Sister deleted that assignment file. As Mr.BEAN failed to submit the assignment on time, He will be punished heavily. Anyway, He has an exclusive excuse, but he needs to prove his innocence anyhow! Can you extract the date/time his assignment was deleted?</p>
+<h4 id="steps-to-solve">Steps to Solve<a href="#steps-to-solve" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>For this challenge I was given a file called <strong>$I4A67FE.docx</strong>. This is a special file name that implies it is most likely from a <a href="https://www.blackbagtech.com/blog/examining-the-windows-10-recycle-bin/">Windows Recycling Bin</a>. Since this file starts with an <em>$I</em> it will contain meta data about the deleted file. I ran xxd on the file to see the hex representation of the data in the file.</p>
+<p><img src="/imgs/2020_noob_ctf/punishment1.png" alt=""></p>
+<p>The first 8 bytes are the header, since this file starts with <strong>0x02</strong> it was deleted from a system running Windows 10. The next eight bytes are the file size in bytes stored in little endian. The next 8 bytes are used to store the date and time the file was deleted in little endian. The time stamp is recorded as the number of 100 nano second intervals since Jan 1, 1601 UTC. Python can be used to convert this time stamp into a human readable format.</p>
+<p><img src="/imgs/2020_noob_ctf/punishment2.png" alt=""></p>
+<p>This shows that the file was deleted on November 4, 2020 at 20:46:55 UTC.</p>
+<h3 id="challenge-analysis">Challenge: Analysis<a href="#challenge-analysis" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>We have suspected Mr.Wolf in illegal dealings and for investigation we have grabbed browser files from his system investigate further and find the information.</p>
+<h4 id="steps-to-solve-1">Steps to Solve<a href="#steps-to-solve-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>For this challenge I was given the contents of Mr.Wolf&rsquo;s <a href="https://www.foxtonforensics.com/browser-history-examiner/firefox-history-location"><strong>Mozilla</strong></a> folder where FireFox stores it&rsquo;s data.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis1.png" alt=""></p>
+<p>The first place I checked was a file called <strong>places.sqlite</strong>, this is a sqlite database that is used by FireFox to store browser history. I used <a href="https://sqlitebrowser.org/">SQLite Database Browser</a> to view the database. The <strong>moz_places</strong> table contains all of the URLs visited by the browser. I saw a link to the MEGA file hosting service so I searched the table for other URLs on that site.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis2.png" alt=""></p>
+<p>I then navigated to each of them until I got to this file on MEGA.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis3.png" alt=""></p>
+<p>After this, I noticed that Mr.Wolf most likely downloaded VeraCrypt.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis4.png" alt=""></p>
+<p>This lead me to believe that the <strong>important_data.file</strong> file was an encrypted VeraCrypt volume, and I would need to keep searching for a password. One URL had the page title &ldquo;i don&rsquo;t use pastebin for my secrets - ed6efdcc&rdquo; , I then visited the link and the password for the VeraCrypt was there.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis5.png" alt=""></p>
+<p>This allowed me to mount the VeraCrypt volume and get the flag.</p>
+<p><img src="/imgs/2020_noob_ctf/analysis6.png" alt=""></p>
+<h3 id="challenge-attack">Challenge: Attack<a href="#challenge-attack" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>There&rsquo;s an attack that happened on one of our client Mr. Innocent Karma and his system has been compromised. We have provided the file, analyze it, and provide answers to our questions for further investigation. What was the IP of the attacker and what attack happened on that machine?</p>
+<h4 id="steps-to-solve-2">Steps to Solve<a href="#steps-to-solve-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>For this challenge I was given an OVA of Mr. Innocent Karma&rsquo;s system. To analyze the system, I imported the OVA into virtual box and then attached the VM&rsquo;s virtual drives to the VM I was using for this CTF. The first file I checked for suspicious activity was the <strong>/var/log/auth.log</strong> file. This file records authentication events in the system. This file could contain evidence of someone possibly brute forcing SSH or logging into the system from a strange IP address. I took a quick look through the file using <strong>less</strong>, and sure enough there were loads of failed login events.</p>
+<p><img src="/imgs/2020_noob_ctf/attack1.png" alt=""></p>
+<p>This means that someone from the IP <strong>192.168.1.30</strong> was brute forcing the password for the <strong>karma</strong> user over SSH.</p>
+<h3 id="challenge-compromise">Challenge: Compromise<a href="#challenge-compromise" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>What account was the username and password of the compromised user?</p>
+<h4 id="steps-to-solve-3">Steps to Solve<a href="#steps-to-solve-3" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>After solving the last challenge, I saw that <strong>192.168.1.30</strong> was able to eventually successfully authenticate using the <strong>karma</strong> user&rsquo;s credentials so for this challenge I just needed to find the Karma user&rsquo;s password. Passwords in most Linux systems are hashed and stored the <strong>/etc/shadow</strong> file.</p>
+<p><img src="/imgs/2020_noob_ctf/compromise1.png" alt=""></p>
+<p>After I had gotten the hash, I just needed to crack it to solve the challenge. For for this I just used <strong>john</strong> and the <strong>rockyou.txt</strong> wordlist.</p>
+<p><img src="/imgs/2020_noob_ctf/compromise2.png" alt=""></p>
+<p>This showed that the <strong>karma</strong> user&rsquo;s password is <strong>godisgood</strong>.</p>
+<h2 id="memory-forensic-challenges">Memory Forensic Challenges<a href="#memory-forensic-challenges" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-game-over">Game Over</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-phishy-email">Phishy Email</a></li>
+</ul>
+<h3 id="challenge-game-over">Challenge: Game Over<a href="#challenge-game-over" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>My friend D E V I N E R was searching for shortcut to earn money. He visited some online sites for that and registered there with his email, but unfortunately he infected his PC with some malware. He gave me the memory dump of his PC and want me to find out the installed malware and remove it. Can you find out when and which website he visited to earn money?</p>
+<h4 id="steps-to-solve-4">Steps to Solve<a href="#steps-to-solve-4" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>For the memory forensics challenges I used <a href="https://www.volatilityfoundation.org/"><strong>Volatility</strong></a> to analyze the memory dump. The first step when using volatility, without knowledge of what OS the system was running when the memory dump was taken is to run the <strong>imageinfo</strong> plugin. This will display what profile to use when analyzing the memory dump.</p>
+<p><img src="/imgs/2020_noob_ctf/gameover1.png" alt=""></p>
+<p>After finding what profile to use, I then ran the <strong>pstree</strong> plugin to see the running processes on the system. This will allow me to see what browser D E V I N E R was using so I can then extract the proper files from memory to see view his search history.</p>
+<p><img src="/imgs/2020_noob_ctf/gameover2.png" alt=""></p>
+<p>Since it appears D E V I N E R was using Chrome I need to see if the <a href="https://www.foxtonforensics.com/browser-history-examiner/chrome-history-location"><strong>History</strong></a> file is loaded in memory so that I can extract it. I can do this with the <strong>filescan</strong> plugin.</p>
+<p><img src="/imgs/2020_noob_ctf/gameover3.png" alt=""></p>
+<p>Sure enough Chrome&rsquo;s <strong>History</strong> file was loaded into memory and I was able to then extract it with the <strong>dumpfiles</strong> plugin.</p>
+<p><img src="/imgs/2020_noob_ctf/gameover4.png" alt=""></p>
+<p>Chrome&rsquo;s <strong>History</strong> file is a sqlite database, so I used <a href="https://sqlitebrowser.org/">SQLite Database Browser</a> to view the database. The <strong>urls</strong> table contains the URLs visited by the browser.</p>
+<p><img src="/imgs/2020_noob_ctf/gameover5.png" alt=""></p>
+<p>This shows that D E V I N E R last visited <strong>https://www.gamblingsites.org</strong> on 12/12/2020. The time is record in the database as the number of microseconds since January, 1601.</p>
+<h3 id="challenge-phishy-email">Challenge: Phishy Email<a href="#challenge-phishy-email" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>To make things easy for me, D E V I N E R told me that he got an email and he believes that the backdoor is installed from that email. Now it&rsquo;s your job to find out from where that email was sent. He is using desktop application for email.</p>
+<p>Note: He only remembers that there was smiley sign i.e. &ldquo;:)&rdquo; in the email.</p>
+<h4 id="steps-to-solve-5">Steps to Solve<a href="#steps-to-solve-5" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>Using the same <strong>pstree</strong> plugin from the last challenge I saw that the desktop mail client <strong>Mail Spring</strong> was being used on the system.</p>
+<p><img src="/imgs/2020_noob_ctf/phishyemail1.png" alt=""></p>
+<p>Next I used the file scan plugin again and saw that there was a file called <strong>edgehill.db</strong> in memory and it was stored under a folder called <strong>Mailspring</strong>. I figured this could be a db where Mail Spring stores emails locally.</p>
+<p><img src="/imgs/2020_noob_ctf/phishyemail2.png" alt=""></p>
+<p>I then extracted this file using the <strong>dumpfiles</strong> plugin.</p>
+<p><img src="/imgs/2020_noob_ctf/phishyemail3.png" alt=""></p>
+<p>Although, when I opened this file in <a href="https://sqlitebrowser.org/">SQLite Database Browser</a> there appeared to be nothing in the database. Out of desperation I decided to open the file in notepad and search for the string &ldquo;:)&rdquo; in the file. This lead to me to discover what looked like an email with a &ldquo;:)&rdquo; in it.</p>
+<p><img src="/imgs/2020_noob_ctf/phishyemail4.png" alt=""></p>
+<p>This shows that the email with a &ldquo;:)&rdquo; in it looks like it was sent from <strong>sarojchaudhary581@gmail.com</strong>.</p>
+<h2 id="osint-challenges">OSINT Challenges<a href="#osint-challenges" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="/posts/2020-noob-ctf/#challenge-find-the-coin">Find The Coin</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-trouver">trouver</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-flying-bear">Flying Bear</a></li>
+<li><a href="/posts/2020-noob-ctf/#challenge-the-watcher">The Watcher</a></li>
+</ul>
+<h3 id="challenge-find-the-coin">Challenge: Find The Coin<a href="#challenge-find-the-coin" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Hackers stole lot of money from Kucoin(Popular exchanger), we found a recent transaction of the value 100,000,000 DX at 26 Nov 2020 happened from the hacker&rsquo;s wallet can you find the tx id for me?</p>
+<h4 id="steps-to-solve-6">Steps to Solve<a href="#steps-to-solve-6" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>The site <a href="https://etherscan.io/token/0x973e52691176d36453868D9d86572788d27041A9">Etherscan</a> allows users to browse transactions for DxChain Tokens as well as many other types of crypto currencies. I then exported the transactions that occured on November 26th 2020 to a csv file.</p>
+<p><img src="/imgs/2020_noob_ctf/findthecoin1.png" alt=""></p>
+<p>Then I just needed to filter by the 100,000,000 quantity and was able to find the tx id.</p>
+<p><img src="/imgs/2020_noob_ctf/findthecoin2.png" alt=""></p>
+<h3 id="challenge-trouver">Challenge: trouver<a href="#challenge-trouver" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>My friend created a forum named photobay on online. can you find that for me, so i could post the pictures i like.</p>
+<h4 id="steps-to-solve-7">Steps to Solve<a href="#steps-to-solve-7" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>For this one I used the dork <strong>intitle:photobay</strong> with GoDuckGo and found a sub reddit called photobay.</p>
+<p><img src="/imgs/2020_noob_ctf/trouver1.png" alt=""></p>
+<p>I then clicked on one of the latest posts on the sub reddit and found the flag.</p>
+<p><img src="/imgs/2020_noob_ctf/trouver2.png" alt=""></p>
+<h3 id="challenge-flying-bear">Challenge: Flying Bear<a href="#challenge-flying-bear" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>maniac has given me this number A25BF4, and asked me to find the related address. I think one of his challenges has an answer to what this number could be!</p>
+<h4 id="steps-to-solve-8">Steps to Solve<a href="#steps-to-solve-8" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>I searched for <strong>&ldquo;A25BF4&rdquo;</strong> with Google and found a page on <strong>https://flightaware.com</strong>.</p>
+<p><img src="/imgs/2020_noob_ctf/flyingbear1.png" alt=""></p>
+<p>This page shows that <strong>A25BF4</strong> is a transponder identification number for the aircraft with the N number <strong>N251HR</strong>.</p>
+<p><img src="/imgs/2020_noob_ctf/flyingbear2.png" alt=""></p>
+<p>This page also shows the past owners of this aircraft registered with the FAA. I started with the address of the current owner although for this challenge the address of the first owner was needed.</p>
+<p><img src="/imgs/2020_noob_ctf/flyingbear3.png" alt=""></p>
+<p>The address of registered owners of an aircraft can be found on <strong>https://registry.faa.gov</strong>.</p>
+<h3 id="challenge-the-watcher">Challenge: The Watcher<a href="#challenge-the-watcher" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>It was a cold winter night tim3zapper got a sudden message from his boss. tim3zapper has been asked to get the mail id of a famous photographer who will be invited for the airline event oraganized by example.com. Can you help tim3zapper with that?</p>
+<h4 id="steps-to-solve-9">Steps to Solve<a href="#steps-to-solve-9" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<p>I started by using Google to search <strong>tim3zapper</strong> and found a twitter profile.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher1.png" alt=""></p>
+<p>This looks like the right profile as the person claims to work at <strong>example.com</strong></p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher2.png" alt=""></p>
+<p>Although this profile looks like it has some deleted tweets.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher3.png" alt=""></p>
+<p>To view the deleted tweets, I viewed the profile on <strong>https://archive.org</strong>.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher4.png" alt=""></p>
+<p>This gave me another username <strong>sullyth3h4x0r</strong>, which I then searched for with Google.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher5.png" alt=""></p>
+<p>From the search I determined that someone with that username had a profile on <strong>https://ello.co</strong></p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher6.png" alt=""></p>
+<p>On that person&rsquo;s profile, I found a post that told me to find the owner of the photograph to get the photographer&rsquo;s email.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher7.png" alt=""></p>
+<p>Bing&rsquo;s reverse image search, showed that that photo was on a page on <strong>https://www.jetphotos.com</strong></p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher8.png" alt=""></p>
+<p>This page got me the name of the photographer but I still needed an email. I then searched for Google again to try and find a page with the photographer&rsquo;s email.</p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher9.png" alt=""></p>
+<p>This led me to a page on <strong>https://www.dutchops.com</strong></p>
+<p><img src="/imgs/2020_noob_ctf/thewatcher10.png" alt=""></p>
+<p>On that page I found a <strong>mailto:</strong> link with the photographer&rsquo;s email and was able to use it to complete the challenge.</p>
+
+      </div></div>
+
+  
+  
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://polarity-express.github.io/assets/main.js"></script>
+<script src="https://polarity-express.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
